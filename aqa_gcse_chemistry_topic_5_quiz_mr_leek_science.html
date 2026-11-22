@@ -1,0 +1,2924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr Leek Science — AQA GCSE Chemistry Topic 5: Energy Changes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ==========================================================================
+       MR LEEK SCIENCE — CRIMSON / RUBY RED DESIGN TOKENS (TOPIC 5)
+       ========================================================================== */
+    :root {
+      --crimson-950: #1f070a;
+      --crimson-900: #450a0a;
+      --crimson-800: #7f1d1d;
+      --ruby-700: #991b1b;
+      --ruby-600: #b91c1c;
+      --ruby-500: #dc2626;
+      --ruby-400: #ef4444;
+
+      --rose-200: #fecaca;
+      --rose-100: #fee2e2;
+      --rose-50: #fef2f2;
+      --rose-tint: #fffafa;
+
+      --bg-page: #f1f5f9;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+
+      --blue-100: #e0f2fe;
+      --blue-700: #0369a1;
+      --purple-100: #f3e8ff;
+      --purple-700: #7e22ce;
+
+      --emerald-700: #047857;
+      --emerald-600: #059669;
+      --emerald-100: #d1fae5;
+      --emerald-50: #ecfdf5;
+
+      --amber-700: #b45309;
+      --amber-600: #d97706;
+      --amber-100: #fef3c7;
+      --amber-50: #fffbeb;
+
+      --shadow-shell: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+      --shadow-cta: 0 6px 18px -2px rgba(185, 28, 28, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--slate-900);
+      min-height: 100vh;
+      padding: 1.5rem 1rem 3rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* ==========================================================================
+       CENTERED MAIN CARD CONTAINER
+       ========================================================================== */
+    .app-container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-shell);
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       TOP CRIMSON BANNER HEADER
+       ========================================================================== */
+    .banner-header {
+      background: linear-gradient(135deg, #1f070a 0%, #450a0a 55%, #7f1d1d 100%);
+      padding: 32px 36px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .banner-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .spec-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--rose-200);
+    }
+
+    .brand-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.85);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .banner-title {
+      font-size: clamp(1.5rem, 3vw, 1.98rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+    }
+
+    .banner-subtitle {
+      font-size: 0.94rem;
+      color: var(--slate-200);
+      max-width: 780px;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       WHITE FORM BODY
+       ========================================================================== */
+    .card-body {
+      padding: 28px 36px 36px;
+    }
+
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    /* Row 1: Student Name & Email Address */
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 8px;
+    }
+
+    .field-label .req-star {
+      color: var(--ruby-500);
+      margin-left: 2px;
+    }
+
+    .field-label .opt-muted {
+      color: var(--slate-400);
+      font-weight: 500;
+      margin-left: 3px;
+    }
+
+    .text-input {
+      width: 100%;
+      padding: 12px 15px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      background: #ffffff;
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .text-input::placeholder {
+      color: var(--slate-400);
+    }
+
+    .text-input:focus {
+      outline: none;
+      border-color: var(--ruby-500);
+      box-shadow: 0 0 0 3.5px rgba(220, 38, 38, 0.14);
+    }
+
+    .text-input.input-error {
+      border-color: var(--ruby-500);
+      background-color: var(--rose-50);
+      animation: shakeInput 0.32s ease;
+    }
+
+    .error-hint {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ruby-600);
+      margin-top: 5px;
+    }
+
+    @keyframes shakeInput {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    /* Section Header Bar */
+    .section-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .selected-tier-pill {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      color: var(--ruby-600);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .avail-count-text {
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--slate-500);
+    }
+
+    /* Row 2: 3-Column Tier Selection Grid */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .tier-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .tier-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .tier-card.selected {
+      border-color: var(--ruby-500);
+      background: var(--rose-tint);
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.08);
+    }
+
+    .tier-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .spec-chip {
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .chip-blue {
+      background: var(--blue-100);
+      color: var(--blue-700);
+    }
+
+    .chip-rose {
+      background: var(--rose-100);
+      color: var(--ruby-600);
+    }
+
+    .chip-purple {
+      background: var(--purple-100);
+      color: var(--purple-700);
+    }
+
+    .radio-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--slate-300);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.16s ease;
+      flex-shrink: 0;
+    }
+
+    .radio-circle svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--slate-300);
+      stroke-width: 2.8;
+      fill: none;
+    }
+
+    .tier-card.selected .radio-circle {
+      background: var(--ruby-500);
+      border-color: var(--ruby-500);
+    }
+
+    .tier-card.selected .radio-circle svg {
+      stroke: #ffffff;
+    }
+
+    .tier-card-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .tier-card-desc {
+      font-size: 0.83rem;
+      color: var(--slate-600);
+      line-height: 1.52;
+    }
+
+    /* Row 3: 2-Column Quiz Focus Grid */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .focus-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      text-align: left;
+      transition: all 0.18s ease;
+    }
+
+    .focus-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .focus-card.selected {
+      border-color: var(--ruby-500);
+      background: var(--rose-tint);
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.08);
+    }
+
+    .focus-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.18s ease;
+    }
+
+    .focus-icon-ruby {
+      background: var(--ruby-500);
+      color: #ffffff;
+    }
+
+    .focus-icon-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+    }
+
+    .focus-card.selected .focus-icon-amber {
+      background: var(--ruby-500);
+      color: #ffffff;
+    }
+
+    .focus-content {
+      flex: 1;
+    }
+
+    .focus-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .focus-check {
+      color: var(--ruby-500);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .focus-desc {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.48;
+    }
+
+    /* Row 4: Number of Questions 5-Column Grid */
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .count-btn {
+      background: #ffffff;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 13px 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .count-btn:hover:not(.active) {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+    }
+
+    .count-btn.active {
+      background: var(--ruby-500);
+      border-color: var(--ruby-500);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.28);
+    }
+
+    /* Divider + Bottom Full-Width CTA */
+    .cta-divider {
+      border: none;
+      border-top: 1px solid var(--slate-200);
+      margin: 26px 0 22px;
+    }
+
+    .btn-start-cta {
+      width: 100%;
+      background: var(--ruby-600);
+      color: #ffffff;
+      border: none;
+      border-radius: 14px;
+      padding: 16px 24px;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: var(--shadow-cta);
+      transition: background 0.18s ease, transform 0.15s ease;
+    }
+
+    .btn-start-cta:hover {
+      background: var(--ruby-700);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       SCREEN 2: ACTIVE QUIZ INTERFACE
+       ========================================================================== */
+    .quiz-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hud-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hud-pill-dark {
+      background: var(--crimson-800);
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-rose {
+      background: var(--rose-50);
+      color: var(--ruby-600);
+      border: 1px solid var(--rose-200);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-stats {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hud-score-badge {
+      background: var(--emerald-50);
+      color: var(--emerald-700);
+      border: 1px solid #a7f3d0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 999px;
+    }
+
+    .hud-q-counter {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+
+    .hud-change-btn {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .hud-change-btn:hover {
+      border-color: var(--ruby-500);
+      color: var(--ruby-600);
+      background: var(--rose-tint);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--ruby-700), var(--ruby-500));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .question-box {
+      background: var(--rose-tint);
+      border: 1.5px solid var(--rose-200);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .q-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 8px;
+    }
+
+    .q-kicker {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ruby-600);
+    }
+
+    .kbd-tip {
+      font-size: 0.73rem;
+      color: var(--slate-400);
+      font-weight: 500;
+    }
+
+    .q-stem {
+      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+      font-weight: 700;
+      color: var(--slate-900);
+      line-height: 1.5;
+    }
+
+    .q-formula-box {
+      margin-top: 12px;
+      background: #ffffff;
+      border: 1px solid var(--rose-200);
+      border-left: 4px solid var(--ruby-500);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-family: "Plus Jakarta Sans", monospace;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--crimson-900);
+      line-height: 1.5;
+    }
+
+    /* Bond Energy Mini-Table Inside Formula Box */
+    .bond-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.86rem;
+    }
+
+    .bond-table th, .bond-table td {
+      border: 1px solid var(--rose-200);
+      padding: 6px 10px;
+      text-align: center;
+    }
+
+    .bond-table th {
+      background: var(--rose-50);
+      color: var(--crimson-900);
+      font-weight: 700;
+    }
+
+    .bond-table td {
+      background: #ffffff;
+      color: var(--slate-800);
+      font-weight: 600;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 18px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--slate-800);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      transition: all 0.15s ease;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      border-color: var(--ruby-500);
+      background: var(--rose-tint);
+    }
+
+    .opt-btn:disabled {
+      cursor: default;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-btn.correct {
+      border-color: var(--emerald-600);
+      background: var(--emerald-50);
+      color: var(--slate-900);
+    }
+
+    .opt-btn.correct .opt-letter {
+      background: var(--emerald-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.incorrect {
+      border-color: var(--ruby-500);
+      background: var(--rose-50);
+      color: var(--crimson-900);
+    }
+
+    .opt-btn.incorrect .opt-letter {
+      background: var(--ruby-500);
+      color: #ffffff;
+    }
+
+    .opt-btn.dimmed {
+      opacity: 0.55;
+    }
+
+    .feedback-panel {
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      animation: fadeSlide 0.22s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feedback-panel.fb-pass {
+      background: var(--emerald-50);
+      border: 1px solid #a7f3d0;
+      border-left: 5px solid var(--emerald-600);
+    }
+
+    .feedback-panel.fb-fail {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      border-left: 5px solid var(--ruby-500);
+    }
+
+    .fb-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .fb-status {
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .fb-pass .fb-status { color: var(--emerald-700); }
+    .fb-fail .fb-status { color: var(--ruby-600); }
+
+    .fb-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--slate-600);
+      border: 1px solid var(--slate-200);
+    }
+
+    .fb-text {
+      font-size: 0.91rem;
+      color: var(--slate-800);
+      line-height: 1.55;
+    }
+
+    .quiz-bottom-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      padding: 11px 18px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-50);
+      border-color: var(--slate-400);
+    }
+
+    .btn-primary-sm {
+      background: var(--ruby-600);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 22px;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(185, 28, 28, 0.25);
+      transition: background 0.16s ease;
+    }
+
+    .btn-primary-sm:hover {
+      background: var(--ruby-700);
+    }
+
+    /* ==========================================================================
+       SCREEN 3: DIAGNOSTIC REPORT
+       ========================================================================== */
+    .report-hero-box {
+      background: var(--rose-tint);
+      border: 1.5px solid var(--rose-200);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .report-student-line {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ruby-600);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .report-score-row {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .report-pct {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      font-weight: 800;
+      color: var(--ruby-600);
+      line-height: 1;
+    }
+
+    .report-fraction {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--slate-600);
+    }
+
+    .grade-pill {
+      display: inline-block;
+      background: var(--crimson-800);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .report-summary-msg {
+      font-size: 0.93rem;
+      color: var(--slate-700);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .report-btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .mastery-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--slate-200);
+    }
+
+    .mastery-section-head h3 {
+      font-size: 1.05rem;
+      color: var(--slate-900);
+    }
+
+    .legend-row {
+      display: flex;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .tag-g { background: var(--emerald-50); color: var(--emerald-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-a { background: var(--amber-50); color: var(--amber-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-r { background: var(--rose-50); color: var(--ruby-600); padding: 3px 9px; border-radius: 999px; }
+
+    .mastery-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .mastery-item {
+      border: 1.5px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: #ffffff;
+    }
+
+    .mastery-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mastery-name {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--slate-900);
+    }
+
+    .mastery-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .sc-strong { background: var(--emerald-100); color: var(--emerald-700); }
+    .sc-dev { background: var(--amber-100); color: var(--amber-700); }
+    .sc-weak { background: var(--rose-100); color: var(--ruby-600); }
+
+    .mastery-bar-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+
+    .mastery-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .fill-g { background: var(--emerald-600); }
+    .fill-a { background: var(--amber-600); }
+    .fill-r { background: var(--ruby-500); }
+
+    .mastery-tip {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .review-card {
+      border: 1.5px solid var(--slate-200);
+      border-left: 5px solid var(--slate-400);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .review-card.rc-ok { border-left-color: var(--emerald-600); }
+    .review-card.rc-bad { border-left-color: var(--ruby-500); }
+
+    .rc-kicker {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--ruby-600);
+      margin-bottom: 4px;
+    }
+
+    .rc-q {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+
+    .rc-ans {
+      font-size: 0.86rem;
+      margin-bottom: 3px;
+    }
+
+    .rc-exp {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--slate-200);
+      font-size: 0.84rem;
+      color: var(--slate-700);
+      line-height: 1.52;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      margin-top: 1.5rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 820px) {
+      .tier-grid {
+        grid-template-columns: 1fr;
+      }
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.75rem 0.65rem 2rem;
+      }
+      .banner-header {
+        padding: 24px 20px;
+      }
+      .card-body {
+        padding: 20px 18px 26px;
+      }
+      .input-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .count-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .kbd-tip {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- ======================================================================
+         CRIMSON HEADER BANNER
+         ====================================================================== -->
+    <header class="banner-header">
+      <div class="banner-top-row">
+        <span class="spec-pill">TOPIC 5 &bull; PAPER 1 REVISION (8462 &amp; 8464)</span>
+        <span class="brand-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fecaca" stroke-width="2.2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+          Mr Leek Science
+        </span>
+      </div>
+      <h1 id="banner-main-title" class="banner-title">Configure Your Energy Changes Quiz</h1>
+      <p id="banner-main-sub" class="banner-subtitle">Enter your name, choose your tier, select either all Topic 5 content or Required Practical &amp; Bond Calculations only, and pick your question count.</p>
+    </header>
+
+    <!-- ======================================================================
+         VIEW 1: CONFIGURATION SCREEN
+         ====================================================================== -->
+    <main id="view-config" class="card-body">
+      <!-- Row 1: Student Name & Email Address -->
+      <div class="section-block input-grid">
+        <div class="field-group">
+          <label for="student-name" class="field-label">Student Name <span class="req-star">*</span></label>
+          <input type="text" id="student-name" class="text-input" placeholder="Enter your full name" autocomplete="name" />
+          <span id="name-error-msg" class="error-hint hidden">Please enter your name before starting the quiz.</span>
+        </div>
+
+        <div class="field-group">
+          <label for="student-email" class="field-label">Email Address <span class="opt-muted">(Optional)</span></label>
+          <input type="email" id="student-email" class="text-input" placeholder="e.g. student@school.co.uk" autocomplete="email" />
+        </div>
+      </div>
+
+      <!-- Row 2: Select Tier / Pathway -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Select Tier / Pathway</span>
+          <span id="selected-tier-badge" class="selected-tier-pill">Higher Tier Selected</span>
+        </div>
+
+        <div class="tier-grid" role="radiogroup" aria-label="Select Tier or Pathway">
+          <!-- Foundation Tier -->
+          <div class="tier-card" id="tier-card-foundation" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('foundation')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('foundation')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-blue">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Foundation Tier</div>
+            <p class="tier-card-desc">Exothermic &amp; endothermic reactions, everyday uses (hand warmers, sports ice packs), Required Practical 4 temperature changes, and reaction profiles (Grades 1–5).</p>
+          </div>
+
+          <!-- Higher Tier (Default Selected) -->
+          <div class="tier-card selected" id="tier-card-higher" role="radio" aria-checked="true" tabindex="0" onclick="selectTier('higher')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('higher')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-rose">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Higher Tier</div>
+            <p class="tier-card-desc">Includes activation energy arrows on reaction profiles and multi-step bond energy calculations (&Delta;H = bonds broken &minus; bonds made) (Grades 4–9).</p>
+          </div>
+
+          <!-- Separate Chemistry -->
+          <div class="tier-card" id="tier-card-separate" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('separate')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('separate')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-purple">TRIPLE 8462</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Separate Chemistry</div>
+            <p class="tier-card-desc">Full 8462 content: Chemical cells &amp; batteries, voltage factors, non-rechargeable vs rechargeable cells, hydrogen fuel cells, half-equations, and pros/cons vs batteries (Grades 1–9).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Quiz Focus -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Quiz Focus</span>
+        </div>
+
+        <div class="focus-grid" role="radiogroup" aria-label="Quiz Focus">
+          <!-- All Topics -->
+          <div class="focus-card selected" id="focus-card-all" role="radio" aria-checked="true" tabindex="0" onclick="selectFocus('all')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('all')">
+            <div class="focus-icon-box focus-icon-ruby" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>All Energy Changes Topics</span>
+                <span id="focus-check-all" class="focus-check">&#10003;</span>
+              </div>
+              <p class="focus-desc">Covers exothermic &amp; endothermic reactions, Required Practical 4, reaction profiles, bond energy calculations &amp; triple cells/fuel cells.</p>
+            </div>
+          </div>
+
+          <!-- Required Practical & Bond Calculations Only -->
+          <div class="focus-card" id="focus-card-practical_calc" role="radio" aria-checked="false" tabindex="0" onclick="selectFocus('practical_calc')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('practical_calc')">
+            <div class="focus-icon-box focus-icon-amber" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>Required Practical &amp; Bond Calculations Only</span>
+                <span id="focus-check-practical_calc" class="focus-check hidden">&#10003;</span>
+              </div>
+              <p class="focus-desc">Focused drill on RP4 (Temperature Changes in Neutralisation/Displacement) &amp; multi-step bond energy calculations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: Number of Questions -->
+      <div class="section-block" style="margin-bottom: 0;">
+        <div class="section-header-bar">
+          <span class="section-title">Number of Questions</span>
+          <span id="available-q-label" class="avail-count-text">54 unique questions available for Higher Tier</span>
+        </div>
+
+        <div class="count-grid" role="radiogroup" aria-label="Number of Questions">
+          <button type="button" class="count-btn" data-count="10" onclick="selectCount(10)">10</button>
+          <button type="button" class="count-btn active" data-count="20" onclick="selectCount(20)">20</button>
+          <button type="button" class="count-btn" data-count="30" onclick="selectCount(30)">30</button>
+          <button type="button" class="count-btn" data-count="50" onclick="selectCount(50)">50</button>
+          <button type="button" class="count-btn" data-count="80" onclick="selectCount(80)">80</button>
+        </div>
+      </div>
+
+      <hr class="cta-divider" />
+
+      <button type="button" id="btn-start-quiz" class="btn-start-cta" onclick="launchConfiguredQuiz()">
+        Start Higher Tier Quiz (20 Questions) &rarr;
+      </button>
+    </main>
+
+    <!-- ======================================================================
+         VIEW 2: ACTIVE QUIZ RUNNER
+         ====================================================================== -->
+    <section id="view-quiz" class="card-body hidden" aria-live="polite">
+      <div class="quiz-hud">
+        <div class="hud-badges">
+          <span id="hud-student-pill" class="hud-pill-dark">Student</span>
+          <span id="hud-tier-pill" class="hud-pill-rose">Higher Tier</span>
+          <span id="hud-topic-pill" class="hud-pill-rose">Sub-topic</span>
+          <span id="hud-retry-pill" class="hud-pill-amber hidden">Retry Missed Mode</span>
+        </div>
+
+        <div class="hud-stats">
+          <span id="hud-live-score" class="hud-score-badge">Score: 0 / 0</span>
+          <span id="hud-counter" class="hud-q-counter">Question 1 of 20</span>
+          <button type="button" class="hud-change-btn" onclick="returnToConfig()">Change Settings</button>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="quiz-progress-fill" class="progress-fill"></div>
+      </div>
+
+      <div class="question-box">
+        <div class="q-meta-row">
+          <span id="q-kicker-label" class="q-kicker">Question 1</span>
+          <span class="kbd-tip">Shortcuts: 1–4 or A–D to answer &bull; Enter for Next</span>
+        </div>
+        <div id="q-stem-text" class="q-stem">Question stem</div>
+        <div id="q-formula-box" class="q-formula-box hidden"></div>
+      </div>
+
+      <div id="quiz-options-list" class="options-list"></div>
+
+      <div id="quiz-feedback-panel" class="feedback-panel hidden">
+        <div class="fb-top">
+          <span id="fb-status-text" class="fb-status"></span>
+          <span class="fb-chip">AQA Examiner Insight</span>
+        </div>
+        <div id="fb-insight-text" class="fb-text"></div>
+      </div>
+
+      <div class="quiz-bottom-actions">
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">&larr; Change Settings</button>
+        <button type="button" id="btn-next-question" class="btn-primary-sm hidden" onclick="advanceQuestion()">Next Question &rarr;</button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 3: END-OF-QUIZ DIAGNOSTIC REPORT
+         ====================================================================== -->
+    <section id="view-report" class="card-body hidden">
+      <div class="report-hero-box">
+        <div id="rep-student-header" class="report-student-line">Diagnostic Report &bull; Student</div>
+        <div class="report-score-row">
+          <span id="rep-pct-val" class="report-pct">85%</span>
+          <span id="rep-frac-val" class="report-fraction">(17 / 20)</span>
+        </div>
+        <div id="rep-grade-pill" class="grade-pill">Estimated AQA Indicator: Grade 8</div>
+        <p id="rep-msg-text" class="report-summary-msg"></p>
+      </div>
+
+      <div class="report-btn-row">
+        <button type="button" id="btn-retry-missed" class="btn-primary-sm" onclick="startRetryMissed()">Retry Missed Questions (3)</button>
+        <button type="button" class="btn-secondary" onclick="launchConfiguredQuiz()">Retake Full Tier Quiz</button>
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">Configure New Quiz</button>
+      </div>
+
+      <div class="mastery-section-head">
+        <h3>Sub-Topic Mastery Breakdown</h3>
+        <div class="legend-row">
+          <span class="tag-g">Strong (80%+)</span>
+          <span class="tag-a">Developing (50–79%)</span>
+          <span class="tag-r">Priority Revision (&lt;50%)</span>
+        </div>
+      </div>
+
+      <div id="rep-mastery-grid" class="mastery-grid"></div>
+
+      <div class="review-header">
+        <h3 style="font-size: 1.05rem; color: var(--slate-900);">Full Question-by-Question Review</h3>
+        <button type="button" id="btn-toggle-review" class="btn-secondary" onclick="toggleReviewSection()">Show All Answers &amp; Insights</button>
+      </div>
+
+      <div id="rep-review-list" class="review-list hidden"></div>
+    </section>
+  </div>
+
+  <p class="footer-note">&copy; Mr Leek Science &bull; AQA GCSE Chemistry (8462 &amp; 8464) Topic 5 Interactive Assessment</p>
+
+  <script>
+    /* ==========================================================================
+       AQA GCSE CHEMISTRY TOPIC 5 QUESTION BANK (70 DISTINCT QUESTIONS)
+       tiers: ["foundation", "higher", "separate"]
+       focus: ["all"] or ["all", "practical_calc"]
+       ========================================================================== */
+    const SUBTOPIC_GUIDANCE = {
+      "Exothermic & Endothermic Reactions": "Remember: Exothermic transfers energy TO the surroundings (temperature rises, e.g. combustion, neutralisation, hand warmers). Endothermic takes in energy FROM the surroundings (temperature drops, e.g. thermal decomposition, sports cold packs).",
+      "Required Practical 4: Temperature Changes": "Revise insulation controls (polystyrene cup inside a beaker with cotton wool and a lid to prevent heat transfer to the surroundings), identifying anomalies, and extrapolating intersecting best-fit lines.",
+      "Reaction Profiles & Activation Energy": "Check arrow directions carefully: Activation energy (E<sub>a</sub>) always goes UP from the reactants to the peak; overall energy change (&Delta;H) goes from reactants to products (down = exothermic, up = endothermic). Catalysts lower the peak without changing &Delta;H.",
+      "Bond Energy Calculations (Higher)": "Always count EVERY single/double bond in all reactant and product molecules first, then calculate &Delta;H = &Sigma;(bonds broken) &minus; &Sigma;(bonds made). Negative &Delta;H = exothermic; positive &Delta;H = endothermic.",
+      "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)": "Larger reactivity difference between two metals in an electrolyte produces a higher voltage. Memorise the alkaline hydrogen fuel cell half-equations: 2H<sub>2</sub> + 4OH<sup>&minus;</sup> &rarr; 4H<sub>2</sub>O + 4e<sup>&minus;</sup> (anode) and O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>&minus;</sup> &rarr; 4OH<sup>&minus;</sup> (cathode)."
+    };
+
+    const QUESTION_POOL = [
+      // ========================================================================
+      // 1. EXOTHERMIC & ENDOTHERMIC REACTIONS (14 Questions)
+      // ========================================================================
+      {
+        id: "T5_Q01",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "What defines an EXOTHERMIC chemical reaction?",
+        formula: null,
+        options: [
+          "A reaction that transfers energy to the surroundings so the temperature of the surroundings increases",
+          "A reaction that takes in energy from the surroundings so the temperature of the surroundings decreases",
+          "A reaction that only occurs when heated continuously with a Bunsen burner",
+          "A reaction in which no chemical bonds are broken or formed"
+        ],
+        answer: 0,
+        insight: "Exothermic ('exo' = out, 'thermic' = heat) reactions release energy to the surroundings, causing a thermometer in the reaction mixture to show a temperature rise."
+      },
+      {
+        id: "T5_Q02",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "What defines an ENDOTHERMIC chemical reaction?",
+        formula: null,
+        options: [
+          "A reaction that takes in energy from the surroundings so the temperature of the surroundings decreases",
+          "A reaction that transfers energy to the surroundings so the temperature of the surroundings increases",
+          "A reaction that releases bright light and heat",
+          "A reaction that always produces a solid precipitate"
+        ],
+        answer: 0,
+        insight: "Endothermic ('endo' = in) reactions absorb thermal energy from the surroundings, causing the surrounding temperature to fall."
+      },
+      {
+        id: "T5_Q03",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "Which group contains ONLY exothermic processes?",
+        formula: null,
+        options: [
+          "Combustion of fuels, neutralisation of an acid with an alkali, and oxidation of iron",
+          "Thermal decomposition of calcium carbonate, photosynthesis, and sports injury cold packs",
+          "Citric acid reacting with sodium hydrogencarbonate, electrolysis, and melting ice",
+          "Combustion of methane, thermal decomposition, and respiration"
+        ],
+        answer: 0,
+        insight: "Combustion, neutralisation, and many oxidation reactions (such as rusting/iron oxidation in hand warmers) are classic AQA exothermic reactions."
+      },
+      {
+        id: "T5_Q04",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "Which pair of reactions are BOTH endothermic?",
+        formula: null,
+        options: [
+          "Thermal decomposition of metal carbonates and the reaction between citric acid and sodium hydrogencarbonate",
+          "Neutralisation of HCl with NaOH and burning magnesium in oxygen",
+          "Displacement of copper by zinc and combustion of ethanol",
+          "Respiration in cells and oxidation of iron powder"
+        ],
+        answer: 0,
+        insight: "AQA named endothermic examples: thermal decomposition (e.g., CaCO<sub>3</sub> &rarr; CaO + CO<sub>2</sub>) and citric acid + sodium hydrogencarbonate (sherbet/fizzy cooling)."
+      },
+      {
+        id: "T5_Q05",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "A student mixes two aqueous solutions in a beaker. The starting temperature is 21.5 &deg;C and the final temperature is 14.2 &deg;C. What type of reaction occurred and why?",
+        formula: "&Delta;T = 14.2 &minus; 21.5 = &minus;7.3 &deg;C",
+        options: [
+          "Endothermic, because thermal energy was transferred from the surroundings into the reacting chemicals",
+          "Exothermic, because heat energy escaped into the air",
+          "Endothermic, because energy was released into the thermometer",
+          "Exothermic, because the temperature decreased by 7.3 &deg;C"
+        ],
+        answer: 0,
+        insight: "A temperature drop of 7.3 &deg;C shows the surroundings lost thermal energy to the system—the hallmark of an endothermic reaction."
+      },
+      {
+        id: "T5_Q06",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "How does a single-use chemical sports injury cold pack work when squeezed?",
+        formula: "NH<sub>4</sub>NO<sub>3</sub>(s) + water &rarr; NH<sub>4</sub>NO<sub>3</sub>(aq)",
+        options: [
+          "An inner bag of water breaks and dissolves ammonium nitrate in an endothermic process, absorbing heat from the injured joint",
+          "Calcium oxide reacts exothermically with water to freeze the skin",
+          "Iron powder oxidises rapidly in air to absorb heat",
+          "Sulfuric acid neutralises sodium hydroxide to cool the pack"
+        ],
+        answer: 0,
+        insight: "Dissolving ammonium nitrate (NH<sub>4</sub>NO<sub>3</sub>) in water is strongly endothermic, drawing thermal energy from the surroundings to cool an injury rapidly."
+      },
+      {
+        id: "T5_Q07",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "How do disposable hand warmers and self-heating coffee cans generate heat?",
+        formula: "4Fe(s) + 3O<sub>2</sub>(g) &rarr; 2Fe<sub>2</sub>O<sub>3</sub>(s) &nbsp;|&nbsp; CaO(s) + H<sub>2</sub>O(l) &rarr; Ca(OH)<sub>2</sub>(s)",
+        options: [
+          "They use exothermic reactions (oxidation of iron in air for hand warmers; calcium oxide + water in self-heating cans) to transfer thermal energy to the surroundings",
+          "They use endothermic thermal decomposition to release cold air",
+          "They contain miniature nuclear fission pellets",
+          "They absorb thermal energy from the user's hands"
+        ],
+        answer: 0,
+        insight: "Everyday exothermic applications: disposable hand warmers use the slow oxidation of iron powder (with salt/charcoal catalyst), while self-heating cans often react calcium oxide with water."
+      },
+      {
+        id: "T5_Q08",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "What is a key disadvantage of a disposable iron-oxidation hand warmer compared with a reusable supersaturated sodium ethanoate hand warmer?",
+        formula: null,
+        options: [
+          "Disposable hand warmers can only be used once because the oxidation reaction is irreversible, whereas reusable packs can be reset by heating in boiling water",
+          "Disposable hand warmers are endothermic and make hands colder",
+          "Reusable hand warmers produce toxic chlorine gas",
+          "Disposable hand warmers require a mains plug to work"
+        ],
+        answer: 0,
+        insight: "Once all the iron powder in a disposable pouch has oxidised, it cannot be reversed and must be thrown away; reusable gel packs crystallise exothermically and can be redissolved by heating."
+      },
+      {
+        id: "T5_Q09",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "When solid citric acid is added to sodium hydrogencarbonate solution in a beaker, vigorous fizzing occurs and the temperature drops from 20 &deg;C to 13 &deg;C. Which gas causes the fizzing?",
+        formula: "Citric acid + NaHCO<sub>3</sub> &rarr; Sodium citrate + H<sub>2</sub>O + ?",
+        options: ["Carbon dioxide (CO<sub>2</sub>)", "Hydrogen (H<sub>2</sub>)", "Oxygen (O<sub>2</sub>)", "Chlorine (Cl<sub>2</sub>)"],
+        answer: 0,
+        insight: "Acid + Metal Hydrogencarbonate &rarr; Salt + Water + Carbon Dioxide, and this reaction is famously endothermic."
+      },
+      {
+        id: "T5_Q10",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "During ANY chemical reaction, what happens to the total amount of energy in the universe?",
+        formula: null,
+        options: [
+          "Energy is conserved—the total energy at the end of the reaction is equal to the total energy at the start",
+          "Energy is destroyed during endothermic reactions",
+          "New energy is created from nothing during exothermic reactions",
+          "All chemical energy is converted into mass"
+        ],
+        answer: 0,
+        insight: "The Law of Conservation of Energy applies to all chemical changes: energy is only transferred between the chemical system and its surroundings."
+      },
+      {
+        id: "T5_Q11",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "In a reversible reaction, if the forward reaction is exothermic and transfers 45 kJ of energy to the surroundings, what happens during the reverse reaction?",
+        formula: "A + B &#8652; C + D",
+        options: [
+          "The reverse reaction is endothermic and absorbs exactly 45 kJ of energy from the surroundings",
+          "The reverse reaction is also exothermic and releases 45 kJ",
+          "The reverse reaction absorbs 90 kJ of energy",
+          "The reverse reaction involves zero energy transfer"
+        ],
+        answer: 0,
+        insight: "In reversible reactions, the energy transferred in the forward exothermic direction is equal in magnitude and opposite in sign to the reverse endothermic direction."
+      },
+      {
+        id: "T5_Q12",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "Why does the thermal decomposition of copper(II) carbonate stop as soon as you turn off the Bunsen burner?",
+        formula: "CuCO<sub>3</sub>(s) &rarr; CuO(s) + CO<sub>2</sub>(g)",
+        options: [
+          "Thermal decomposition is endothermic and requires a continuous input of heat energy from the surroundings to keep breaking bonds",
+          "Copper(II) carbonate turns into an unreactive catalyst",
+          "Carbon dioxide puts out the reaction by freezing the copper oxide",
+          "Thermal decomposition is strongly exothermic"
+        ],
+        answer: 0,
+        insight: "Endothermic thermal decompositions need constant heating to supply the energy required to break down the compound."
+      },
+      {
+        id: "T5_Q13",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "A student tests four reactions (P, Q, R, S). P: +12.4 &deg;C; Q: &minus;4.8 &deg;C; R: +18.9 &deg;C; S: &minus;8.1 &deg;C. Which reaction is the MOST strongly exothermic?",
+        formula: "&Delta;T measurements",
+        options: ["Reaction R (+18.9 &deg;C)", "Reaction S (&minus;8.1 &deg;C)", "Reaction P (+12.4 &deg;C)", "Reaction Q (&minus;4.8 &deg;C)"],
+        answer: 0,
+        insight: "Reaction R produced the largest temperature increase (+18.9 &deg;C), meaning it transferred the greatest amount of thermal energy to the surroundings."
+      },
+      {
+        id: "T5_Q14",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Exothermic & Endothermic Reactions",
+        stem: "When anhydrous copper(II) sulfate (white powder) has water added to it, it turns blue and gets very warm. What type of reaction is this?",
+        formula: "CuSO<sub>4</sub>(s) + 5H<sub>2</sub>O(l) &rarr; CuSO<sub>4</sub>&middot;5H<sub>2</sub>O(s)",
+        options: [
+          "Exothermic hydration reaction",
+          "Endothermic thermal decomposition",
+          "Endothermic neutralisation",
+          "Electrolysis"
+        ],
+        answer: 0,
+        insight: "Hydrating anhydrous copper(II) sulfate releases heat (exothermic), whereas heating hydrated copper(II) sulfate to drive off water is endothermic."
+      },
+
+      // ========================================================================
+      // 2. REQUIRED PRACTICAL 4: TEMPERATURE CHANGES (14 Questions)
+      // ========================================================================
+      {
+        id: "T5_Q15",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "In Required Practical 4 (investigating temperature changes during neutralisation), why is the reaction carried out inside an expanded polystyrene cup standing in a glass beaker with a lid?",
+        formula: null,
+        options: [
+          "Polystyrene is a good thermal insulator and the lid prevents heat loss by convection/evaporation, minimising energy transfer to the surroundings",
+          "Polystyrene acts as a catalyst to speed up neutralisation",
+          "Glass reacts with hydrochloric acid to produce extra heat",
+          "The lid prevents oxygen from entering the cup"
+        ],
+        answer: 0,
+        insight: "AQA RP4 essential apparatus question: expanded polystyrene + lid (and optional cotton wool) insulates the reaction mixture so the measured temperature change is as accurate as possible."
+      },
+      {
+        id: "T5_Q16",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "In Required Practical 4, a student adds 5 cm<sup>3</sup> portions of sodium hydroxide solution to 25 cm<sup>3</sup> of dilute hydrochloric acid and records the highest temperature after each addition. Identify the independent and dependent variables.",
+        formula: "HCl(aq) + NaOH(aq) &rarr; NaCl(aq) + H<sub>2</sub>O(l)",
+        options: [
+          "Independent variable: total volume of NaOH added; Dependent variable: maximum temperature reached",
+          "Independent variable: maximum temperature reached; Dependent variable: volume of NaOH added",
+          "Independent variable: concentration of HCl; Dependent variable: type of thermometer",
+          "Independent variable: room temperature; Dependent variable: volume of HCl"
+        ],
+        answer: 0,
+        insight: "The variable deliberately changed by the investigator is the volume of NaOH added (independent), and the variable measured is the temperature of the mixture (dependent)."
+      },
+      {
+        id: "T5_Q17",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "Which set of variables must be kept CONSTANT (control variables) when investigating how the concentration of acid affects the temperature change in Required Practical 4?",
+        formula: null,
+        options: [
+          "Volume of acid, volume and concentration of alkali, and starting temperature/insulation setup",
+          "Maximum temperature reached and temperature rise",
+          "Concentration of the acid and final temperature",
+          "Type of metal carbonate and colour of indicator"
+        ],
+        answer: 0,
+        insight: "To ensure a fair test, only the acid concentration should vary; volumes of both solutions, alkali concentration, and cup insulation must remain constant."
+      },
+      {
+        id: "T5_Q18",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "In Required Practical 4, as 5 cm<sup>3</sup> portions of NaOH are added to 25 cm<sup>3</sup> of HCl, the temperature rises up to 25 cm<sup>3</sup> of NaOH added, and then DECREASES when 30 cm<sup>3</sup>, 35 cm<sup>3</sup>, and 40 cm<sup>3</sup> are added. Why does the temperature fall after 25 cm<sup>3</sup>?",
+        formula: null,
+        options: [
+          "All the HCl has been neutralised (the reaction has finished), so adding more cooler NaOH solution dilutes the mixture and spreads the thermal energy over a larger volume",
+          "The reaction suddenly turns endothermic after 25 cm<sup>3</sup>",
+          "Sodium chloride absorbs all the heat and freezes",
+          "The thermometer stops working above 30 &deg;C"
+        ],
+        answer: 0,
+        insight: "Once the limiting reactant (HCl) is completely used up, no further exothermic reaction occurs; adding extra room-temperature alkali cools the larger total volume of liquid."
+      },
+      {
+        id: "T5_Q19",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "When plotting a graph of temperature against volume of alkali added in Required Practical 4, how do you find the true maximum temperature reached at exact neutralisation?",
+        formula: null,
+        options: [
+          "Draw two straight lines of best fit (one for the rising section and one for the falling section) and extrapolate them until they intersect",
+          "Connect every data point dot-to-dot with a ruler and read the lowest point",
+          "Take the average of the first and last thermometer readings",
+          "Draw a horizontal line through 20 &deg;C"
+        ],
+        answer: 0,
+        insight: "Extrapolating the rising and falling best-fit lines to their intersection point compensates for heat lost to the surroundings near the end-point."
+      },
+      {
+        id: "T5_Q20",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "A student investigates the temperature change when adding different metal powders (Mg, Zn, Fe, Cu) to 25 cm<sup>3</sup> of 0.5 mol/dm<sup>3</sup> copper(II) sulfate solution. Why must the student stir the mixture gently with the thermometer before reading the peak temperature?",
+        formula: "M(s) + CuSO<sub>4</sub>(aq) &rarr; MSO<sub>4</sub>(aq) + Cu(s)",
+        options: [
+          "To ensure the metal reacts quickly and thermal energy is distributed evenly throughout the solution",
+          "To cool the solution back down to room temperature",
+          "To dissolve the copper precipitate into the polystyrene cup",
+          "To evaporate half the water"
+        ],
+        answer: 0,
+        insight: "Gentle stirring brings fresh solution into contact with the metal surface and ensures a uniform temperature throughout the liquid."
+      },
+      {
+        id: "T5_Q21",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "In the metal displacement experiment (RP4), a student adds 1.0 g of magnesium, zinc, iron, and copper separately to 25 cm<sup>3</sup> of copper(II) sulfate solution. Which metal gives the LARGEST temperature rise and why?",
+        formula: "Mg &gt; Zn &gt; Fe &gt; (H) &gt; Cu",
+        options: [
+          "Magnesium, because it is the most reactive metal and has the greatest reactivity difference from copper",
+          "Copper, because it reacts with copper sulfate to double its mass",
+          "Iron, because it forms a magnetic solution",
+          "Zinc, because it is less reactive than copper"
+        ],
+        answer: 0,
+        insight: "The further apart two metals are in the reactivity series, the more exothermic the displacement reaction and the greater the temperature increase."
+      },
+      {
+        id: "T5_Q22",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "A student records the temperature rise when zinc reacts with copper(II) sulfate four times: 14.5 &deg;C, 14.8 &deg;C, 9.2 &deg;C, and 14.7 &deg;C. What is the correct mean temperature rise?",
+        formula: "Identify anomaly before calculating mean",
+        options: ["14.7 &deg;C", "13.3 &deg;C", "14.5 &deg;C", "14.8 &deg;C"],
+        answer: 0,
+        insight: "9.2 &deg;C is an anomalous result (e.g. incomplete stirring or heat loss) and must be discarded. Mean of the three concordant repeats = (14.5 + 14.8 + 14.7) &divide; 3 = 44.0 &divide; 3 = 14.67 &rarr; 14.7 &deg;C."
+      },
+      {
+        id: "T5_Q23",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "In Required Practical 4, how could a student improve the apparatus to reduce heat loss to the surroundings even further than using a single polystyrene cup?",
+        formula: null,
+        options: [
+          "Place the polystyrene cup inside a second polystyrene cup (double-walled insulation) packed with cotton wool inside a beaker, and use a tight-fitting lid",
+          "Replace the polystyrene cup with a thin copper metal beaker",
+          "Remove the lid and place the cup in front of an open window",
+          "Use a larger volume of cold water around the outside of the cup"
+        ],
+        answer: 0,
+        insight: "Nesting two polystyrene cups with trapped air/cotton wool and a lid dramatically reduces conduction, convection, and evaporation losses."
+      },
+      {
+        id: "T5_Q24",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "Why is a digital temperature probe connected to a data logger often better than a standard liquid-in-glass thermometer in Required Practical 4?",
+        formula: null,
+        options: [
+          "It has higher resolution (e.g. 0.1 &deg;C), records readings continuously so the exact peak temperature is not missed, and reduces human parallax error",
+          "It prevents the acid from reacting with the alkali",
+          "It eliminates the need for an insulating polystyrene cup",
+          "It automatically calculates the relative formula mass"
+        ],
+        answer: 0,
+        insight: "Data loggers sample temperatures multiple times per second with higher precision, capturing the exact maximum temperature without manual reading errors."
+      },
+      {
+        id: "T5_Q25",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "In Required Practical 4, if the concentration of both the hydrochloric acid and sodium hydroxide is DOUBLED (using the same 25 cm<sup>3</sup> volumes), how does the temperature rise compare?",
+        formula: "2.0 mol/dm<sup>3</sup> vs. 1.0 mol/dm<sup>3</sup>",
+        options: [
+          "The temperature rise approximately doubles because twice as many moles of H<sup>+</sup> and OH<sup>&minus;</sup> react in the same total volume of water",
+          "The temperature rise stays identical because volume did not change",
+          "The temperature rise halves because the solution is denser",
+          "The temperature drops by 10 &deg;C"
+        ],
+        answer: 0,
+        insight: "Doubling concentration doubles the number of reacting moles (releasing twice as much thermal energy) while the total mass/volume of water being heated stays the same."
+      },
+      {
+        id: "T5_Q26",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "When 50 cm<sup>3</sup> of 1.0 mol/dm<sup>3</sup> HCl reacts with 50 cm<sup>3</sup> of 1.0 mol/dm<sup>3</sup> NaOH (total 100 cm<sup>3</sup>), the temperature rises by 6.5 &deg;C. What temperature rise would you expect if 25 cm<sup>3</sup> of 1.0 mol/dm<sup>3</sup> HCl reacts with 25 cm<sup>3</sup> of 1.0 mol/dm<sup>3</sup> NaOH (total 50 cm<sup>3</sup>)?",
+        formula: "Half the moles heating half the volume",
+        options: [
+          "6.5 &deg;C (approximately the same temperature rise)",
+          "3.25 &deg;C (half the temperature rise)",
+          "13.0 &deg;C (double the temperature rise)",
+          "0.0 &deg;C (no temperature change)"
+        ],
+        answer: 0,
+        insight: "Half the moles of reactants release half the thermal energy, but that energy is heating only half the volume of solution—so the temperature rise remains ~6.5 &deg;C!"
+      },
+      {
+        id: "T5_Q27",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "Why is an excess of zinc powder added to a fixed volume of copper(II) sulfate solution in Required Practical 4?",
+        formula: "Zn(s) + CuSO<sub>4</sub>(aq) &rarr; ZnSO<sub>4</sub>(aq) + Cu(s)",
+        options: [
+          "To ensure ALL of the copper(II) sulfate reacts completely so the maximum possible energy is released",
+          "To make sure the copper(II) sulfate is in excess",
+          "To turn the solution acidic",
+          "Because zinc is less reactive than copper"
+        ],
+        answer: 0,
+        insight: "Adding excess solid metal guarantees that every mole of aqueous Cu<sup>2+</sup> ions reacts, making the measured temperature rise proportional to the fixed amount of CuSO<sub>4</sub>."
+      },
+      {
+        id: "T5_Q28",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Required Practical 4: Temperature Changes",
+        stem: "What is the main source of systematic error in Required Practical 4 even when a polystyrene cup is used?",
+        formula: null,
+        options: [
+          "Some thermal energy still escapes to the surroundings (air, cup, and thermometer), making the measured temperature rise slightly lower than the theoretical value",
+          "Too much heat enters from the room, making the temperature rise too high",
+          "The measuring cylinder has a 50% volume error",
+          "Polystyrene dissolves in dilute hydrochloric acid"
+        ],
+        answer: 0,
+        insight: "Because no cup is a 100% perfect insulator, small amounts of heat always escape to the air and cup material, slightly underestimating &Delta;T."
+      },
+
+      // ========================================================================
+      // 3. REACTION PROFILES & ACTIVATION ENERGY (14 Questions)
+      // ========================================================================
+      {
+        id: "T5_Q29",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "On a reaction profile diagram (energy on the y-axis, progress of reaction on the x-axis), how do the energy levels of the reactants and products compare in an EXOTHERMIC reaction?",
+        formula: "Reactants &rarr; Products + Energy",
+        options: [
+          "The products are at a LOWER energy level than the reactants (the energy line goes down overall)",
+          "The products are at a HIGHER energy level than the reactants (the energy line goes up overall)",
+          "The reactants and products are at the exact same energy level",
+          "There is no peak between the reactants and products"
+        ],
+        answer: 0,
+        insight: "In an exothermic reaction, the chemicals lose internal energy to the surroundings, so the products end up lower on the energy axis than the reactants."
+      },
+      {
+        id: "T5_Q30",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "On a reaction profile diagram for an ENDOTHERMIC reaction, how do the energy levels of the reactants and products compare?",
+        formula: "Reactants + Energy &rarr; Products",
+        options: [
+          "The products are at a HIGHER energy level than the reactants (the energy line goes up overall)",
+          "The products are at a LOWER energy level than the reactants",
+          "The activation energy is zero",
+          "The products have negative mass"
+        ],
+        answer: 0,
+        insight: "In an endothermic reaction, the reacting chemicals absorb energy from the surroundings, so the products store more energy and sit higher than the reactants."
+      },
+      {
+        id: "T5_Q31",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "What is the definition of ACTIVATION ENERGY (E<sub>a</sub>)?",
+        formula: "E<sub>a</sub>",
+        options: [
+          "The minimum amount of energy that colliding reactant particles must have in order to react",
+          "The total energy released when new bonds are formed",
+          "The temperature at which a solid melts into a liquid",
+          "The difference in energy between the products and the surroundings"
+        ],
+        answer: 0,
+        insight: "AQA standard definition: Activation energy is the minimum amount of energy that particles must have to react when they collide."
+      },
+      {
+        id: "T5_Q32",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "How is the ACTIVATION ENERGY (E<sub>a</sub>) drawn on a reaction profile diagram?",
+        formula: null,
+        options: [
+          "An upward arrow from the energy level of the REACTANTS to the highest point (peak) of the curve",
+          "A downward arrow from the peak of the curve to the energy level of the PRODUCTS",
+          "An arrow between the energy level of the REACTANTS and the energy level of the PRODUCTS",
+          "A horizontal arrow along the x-axis from left to right"
+        ],
+        answer: 0,
+        insight: "Common exam trap! Activation energy ALWAYS starts at the REACTANTS level and points UP to the peak of the curve—never from the products!"
+      },
+      {
+        id: "T5_Q33",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "How is the OVERALL ENERGY CHANGE (&Delta;H) represented on a reaction profile diagram?",
+        formula: "&Delta;H",
+        options: [
+          "The vertical difference between the energy level of the reactants and the energy level of the products (pointing down for exothermic, up for endothermic)",
+          "The vertical height from zero energy to the peak of the curve",
+          "The vertical distance from the peak of the curve down to the products",
+          "The width of the curve along the reaction progress axis"
+        ],
+        answer: 0,
+        insight: "The overall energy change (&Delta;H) is solely the vertical energy gap between reactants and products."
+      },
+      {
+        id: "T5_Q34",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "How does adding a CATALYST affect a reaction profile diagram?",
+        formula: null,
+        options: [
+          "It provides an alternative reaction pathway with a LOWER activation energy (a lower peak), while the energy levels of the reactants and products (&Delta;H) remain unchanged",
+          "It lowers the energy of the products so the reaction becomes more exothermic",
+          "It raises the energy of the reactants and increases the activation energy",
+          "It eliminates the activation energy completely to zero"
+        ],
+        answer: 0,
+        insight: "A catalyst lowers the peak (activation energy E<sub>a</sub>) via an alternative pathway, speeding up the reaction without altering &Delta;H."
+      },
+      {
+        id: "T5_Q35",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "In a reaction profile, the reactants are at 120 kJ/mol, the peak of the curve is at 290 kJ/mol, and the products are at 45 kJ/mol. Calculate the activation energy (E<sub>a</sub>) and the overall energy change (&Delta;H).",
+        formula: "Reactants = 120 | Peak = 290 | Products = 45 (kJ/mol)",
+        options: [
+          "E<sub>a</sub> = +170 kJ/mol; &Delta;H = &minus;75 kJ/mol (exothermic)",
+          "E<sub>a</sub> = +245 kJ/mol; &Delta;H = +75 kJ/mol (endothermic)",
+          "E<sub>a</sub> = +290 kJ/mol; &Delta;H = &minus;170 kJ/mol (exothermic)",
+          "E<sub>a</sub> = +75 kJ/mol; &Delta;H = &minus;170 kJ/mol (exothermic)"
+        ],
+        answer: 0,
+        insight: "E<sub>a</sub> = Peak &minus; Reactants = 290 &minus; 120 = +170 kJ/mol. Overall energy change &Delta;H = Products &minus; Reactants = 45 &minus; 120 = &minus;75 kJ/mol (exothermic)."
+      },
+      {
+        id: "T5_Q36",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "In an endothermic reaction profile, the reactants are at 80 kJ/mol, the peak is at 260 kJ/mol, and the products are at 195 kJ/mol. What is the activation energy (E<sub>a</sub>) and overall energy change (&Delta;H)?",
+        formula: "Reactants = 80 | Peak = 260 | Products = 195 (kJ/mol)",
+        options: [
+          "E<sub>a</sub> = +180 kJ/mol; &Delta;H = +115 kJ/mol",
+          "E<sub>a</sub> = +65 kJ/mol; &Delta;H = +115 kJ/mol",
+          "E<sub>a</sub> = +180 kJ/mol; &Delta;H = &minus;115 kJ/mol",
+          "E<sub>a</sub> = +115 kJ/mol; &Delta;H = +180 kJ/mol"
+        ],
+        answer: 0,
+        insight: "E<sub>a</sub> = 260 &minus; 80 = +180 kJ/mol. Overall energy change &Delta;H = 195 &minus; 80 = +115 kJ/mol (endothermic)."
+      },
+      {
+        id: "T5_Q37",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "Why do most chemical reactions—even strongly exothermic ones like burning methane—require a spark or match to get started?",
+        formula: "CH<sub>4</sub>(g) + 2O<sub>2</sub>(g) &rarr; CO<sub>2</sub>(g) + 2H<sub>2</sub>O(g)",
+        options: [
+          "To supply the activation energy needed to break the initial bonds in the reactant molecules so they can react",
+          "Because combustion of methane is an endothermic reaction",
+          "To create oxygen molecules from nitrogen in the air",
+          "Because methane only reacts below 0 &deg;C"
+        ],
+        answer: 0,
+        insight: "Initial energy from a spark provides particles with energy equal to or greater than the activation energy (E<sub>a</sub>) to start breaking C&minus;H and O=O bonds."
+      },
+      {
+        id: "T5_Q38",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "What is plotted on the horizontal (x) axis and vertical (y) axis of an AQA reaction profile?",
+        formula: null,
+        options: [
+          "x-axis: Progress of reaction; y-axis: Energy",
+          "x-axis: Temperature; y-axis: Time",
+          "x-axis: Volume of gas; y-axis: Mass",
+          "x-axis: Activation energy; y-axis: Catalyst mass"
+        ],
+        answer: 0,
+        insight: "Standard AQA axes: Energy on the vertical y-axis and Progress of reaction on the horizontal x-axis."
+      },
+      {
+        id: "T5_Q39",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "A catalysed reaction has an activation energy of 95 kJ/mol, whereas the uncatalysed reaction has an activation energy of 160 kJ/mol. If the uncatalysed reaction has &Delta;H = &minus;82 kJ/mol, what is &Delta;H for the catalysed reaction?",
+        formula: null,
+        options: ["&minus;82 kJ/mol", "&minus;147 kJ/mol", "&minus;17 kJ/mol", "+65 kJ/mol"],
+        answer: 0,
+        insight: "A catalyst lowers E<sub>a</sub> by 65 kJ/mol, but the starting energy of reactants and final energy of products do not change—so &Delta;H stays exactly &minus;82 kJ/mol."
+      },
+      {
+        id: "T5_Q40",
+        tiers: ["foundation", "higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "When a spark ignites a mixture of hydrogen and oxygen gases, a loud explosion occurs and a huge amount of energy is released. Which statement about their reaction profile is true?",
+        formula: "2H<sub>2</sub>(g) + O<sub>2</sub>(g) &rarr; 2H<sub>2</sub>O(g)",
+        options: [
+          "The energy of the H<sub>2</sub>O products is much lower than the energy of the H<sub>2</sub> and O<sub>2</sub> reactants",
+          "The energy of the H<sub>2</sub>O products is higher than the reactants",
+          "The activation energy is larger than the energy released",
+          "No bonds are broken during the explosion"
+        ],
+        answer: 0,
+        insight: "Explosive combustion is strongly exothermic, meaning the products sit far below the reactants on the reaction profile."
+      },
+      {
+        id: "T5_Q41",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "What does the peak (highest point) of a reaction profile represent?",
+        formula: null,
+        options: [
+          "The transition state where existing reactant bonds are broken/stretching before new product bonds form",
+          "The final stable products of the reaction",
+          "The point where the catalyst is destroyed",
+          "The temperature of the laboratory"
+        ],
+        answer: 0,
+        insight: "Energy must first be supplied to break bonds in the reactants, raising the system up to the peak before energy is released as product bonds form."
+      },
+      {
+        id: "T5_Q42",
+        tiers: ["higher", "separate"],
+        focus: ["all"],
+        topic: "Reaction Profiles & Activation Energy",
+        stem: "If the overall energy change (&Delta;H) of a reaction is +54 kJ/mol, what does the positive (+) sign tell you?",
+        formula: "&Delta;H = +54 kJ/mol",
+        options: [
+          "The reaction is endothermic—the products have 54 kJ/mol more energy than the reactants",
+          "The reaction is exothermic—54 kJ/mol of energy is released to the surroundings",
+          "The activation energy is 54 kJ/mol",
+          "54 grams of product are formed"
+        ],
+        answer: 0,
+        insight: "Sign convention: positive &Delta;H (+) = endothermic (net energy absorbed); negative &Delta;H (&minus;) = exothermic (net energy released)."
+      },
+
+      // ========================================================================
+      // 4. BOND ENERGY CALCULATIONS (HIGHER & SEPARATE — 14 Questions)
+      // ========================================================================
+      {
+        id: "T5_Q43",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "Which statement correctly describes the energy changes during bond breaking and bond making?",
+        formula: null,
+        options: [
+          "Bond breaking is ENDOTHERMIC (energy must be supplied to break bonds); bond making is EXOTHERMIC (energy is released when new bonds form)",
+          "Bond breaking is exothermic; bond making is endothermic",
+          "Both bond breaking and bond making are exothermic",
+          "Both bond breaking and bond making are endothermic"
+        ],
+        answer: 0,
+        insight: "AQA Higher Tier core rule: Breaking bonds requires energy (endothermic), whereas forming new bonds releases energy (exothermic)."
+      },
+      {
+        id: "T5_Q44",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "Why is a chemical reaction EXOTHERMIC overall in terms of bond energies?",
+        formula: "&Delta;H = &Sigma;(Bonds Broken) &minus; &Sigma;(Bonds Made)",
+        options: [
+          "The energy released from forming new bonds in the products is GREATER than the energy needed to break existing bonds in the reactants",
+          "The energy needed to break bonds in the reactants is greater than the energy released from making new bonds",
+          "More bonds are broken than are formed",
+          "No bonds are broken in exothermic reactions"
+        ],
+        answer: 0,
+        insight: "When energy released (bonds made) &gt; energy absorbed (bonds broken), there is a net release of energy to the surroundings (&Delta;H is negative)."
+      },
+      {
+        id: "T5_Q45",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "Hydrogen reacts with chlorine to form hydrogen chloride. Using the bond energies below, calculate the overall energy change (&Delta;H) for the reaction.",
+        formula: "H&minus;H + Cl&minus;Cl &rarr; 2 H&minus;Cl<table class='bond-table'><tr><th>Bond</th><th>H&minus;H</th><th>Cl&minus;Cl</th><th>H&minus;Cl</th></tr><tr><td>Energy (kJ/mol)</td><td>436</td><td>242</td><td>431</td></tr></table>",
+        options: ["&minus;184 kJ/mol", "+184 kJ/mol", "+247 kJ/mol", "&minus;247 kJ/mol"],
+        answer: 0,
+        insight: "Bonds broken = 436 + 242 = 678 kJ/mol. Bonds made = 2 &times; 431 = 862 kJ/mol. &Delta;H = 678 &minus; 862 = &minus;184 kJ/mol (exothermic)."
+      },
+      {
+        id: "T5_Q46",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "Hydrogen burns in oxygen to form water vapour. Calculate the overall energy change (&Delta;H) for the equation shown.",
+        formula: "2 H&minus;H + O=O &rarr; 2 H&minus;O&minus;H<table class='bond-table'><tr><th>Bond</th><th>H&minus;H</th><th>O=O</th><th>O&minus;H</th></tr><tr><td>Energy (kJ/mol)</td><td>436</td><td>498</td><td>464</td></tr></table>",
+        options: ["&minus;486 kJ/mol", "+486 kJ/mol", "&minus;22 kJ/mol", "&minus;950 kJ/mol"],
+        answer: 0,
+        insight: "Bonds broken = (2 &times; 436) + 498 = 872 + 498 = 1370 kJ/mol. Bonds made (4 O&minus;H bonds in 2 H<sub>2</sub>O) = 4 &times; 464 = 1856 kJ/mol. &Delta;H = 1370 &minus; 1856 = &minus;486 kJ/mol."
+      },
+      {
+        id: "T5_Q47",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "Methane burns completely in oxygen. Calculate the overall energy change (&Delta;H) for the combustion of 1 mole of methane.",
+        formula: "CH<sub>4</sub> + 2O<sub>2</sub> &rarr; CO<sub>2</sub> + 2H<sub>2</sub>O<table class='bond-table'><tr><th>Bond</th><th>C&minus;H</th><th>O=O</th><th>C=O</th><th>O&minus;H</th></tr><tr><td>Energy (kJ/mol)</td><td>413</td><td>498</td><td>805</td><td>464</td></tr></table>",
+        options: ["&minus;818 kJ/mol", "+818 kJ/mol", "&minus;354 kJ/mol", "&minus;1231 kJ/mol"],
+        answer: 0,
+        insight: "Bonds broken: (4 &times; 413) + (2 &times; 498) = 1652 + 996 = 2648 kJ/mol. Bonds made: (2 &times; 805 in O=C=O) + (4 &times; 464 in 2 H<sub>2</sub>O) = 1610 + 1856 = 3466 kJ/mol. &Delta;H = 2648 &minus; 3466 = &minus;818 kJ/mol."
+      },
+      {
+        id: "T5_Q48",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "Ammonia is synthesised in the Haber process. Calculate the overall energy change (&Delta;H) for the forward reaction shown.",
+        formula: "N&equiv;N + 3 H&minus;H &rarr; 2 NH<sub>3</sub><table class='bond-table'><tr><th>Bond</th><th>N&equiv;N</th><th>H&minus;H</th><th>N&minus;H</th></tr><tr><td>Energy (kJ/mol)</td><td>945</td><td>436</td><td>391</td></tr></table>",
+        options: ["&minus;93 kJ/mol", "+93 kJ/mol", "+208 kJ/mol", "&minus;208 kJ/mol"],
+        answer: 0,
+        insight: "Bonds broken: 945 + (3 &times; 436) = 945 + 1308 = 2253 kJ/mol. Bonds made (2 NH<sub>3</sub> &times; 3 N&minus;H = 6 N&minus;H bonds): 6 &times; 391 = 2346 kJ/mol. &Delta;H = 2253 &minus; 2346 = &minus;93 kJ/mol."
+      },
+      {
+        id: "T5_Q49",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "Ethene reacts with bromine to form dibromoethane. Calculate the overall energy change (&Delta;H) for this addition reaction.",
+        formula: "C<sub>2</sub>H<sub>4</sub> + Br<sub>2</sub> &rarr; C<sub>2</sub>H<sub>4</sub>Br<sub>2</sub><table class='bond-table'><tr><th>Bond</th><th>C=C</th><th>C&minus;H</th><th>Br&minus;Br</th><th>C&minus;C</th><th>C&minus;Br</th></tr><tr><td>Energy (kJ/mol)</td><td>614</td><td>413</td><td>193</td><td>348</td><td>276</td></tr></table>",
+        options: ["&minus;93 kJ/mol", "+93 kJ/mol", "&minus;183 kJ/mol", "+276 kJ/mol"],
+        answer: 0,
+        insight: "Bonds broken: 1 C=C (614) + 4 C&minus;H (1652) + 1 Br&minus;Br (193) = 2459 kJ/mol. Bonds made: 1 C&minus;C (348) + 4 C&minus;H (1652) + 2 C&minus;Br (552) = 2552 kJ/mol. &Delta;H = 2459 &minus; 2552 = &minus;93 kJ/mol."
+      },
+      {
+        id: "T5_Q50",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "Hydrogen bromide decomposes into hydrogen and bromine gas. Calculate the overall energy change (&Delta;H) for the reaction shown.",
+        formula: "2 H&minus;Br &rarr; H&minus;H + Br&minus;Br<table class='bond-table'><tr><th>Bond</th><th>H&minus;Br</th><th>H&minus;H</th><th>Br&minus;Br</th></tr><tr><td>Energy (kJ/mol)</td><td>366</td><td>436</td><td>193</td></tr></table>",
+        options: ["+103 kJ/mol", "&minus;103 kJ/mol", "&minus;263 kJ/mol", "+263 kJ/mol"],
+        answer: 0,
+        insight: "Bonds broken = 2 &times; 366 = 732 kJ/mol. Bonds made = 436 + 193 = 629 kJ/mol. &Delta;H = 732 &minus; 629 = +103 kJ/mol (endothermic)."
+      },
+      {
+        id: "T5_Q51",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "In a reaction, the total energy required to break all reactant bonds is 1540 kJ/mol and the total energy released when all product bonds form is 1890 kJ/mol. What is &Delta;H and is the reaction exothermic or endothermic?",
+        formula: "&Delta;H = 1540 &minus; 1890",
+        options: [
+          "&Delta;H = &minus;350 kJ/mol (Exothermic)",
+          "&Delta;H = +350 kJ/mol (Endothermic)",
+          "&Delta;H = &minus;350 kJ/mol (Endothermic)",
+          "&Delta;H = +3430 kJ/mol (Exothermic)"
+        ],
+        answer: 0,
+        insight: "&Delta;H = 1540 &minus; 1890 = &minus;350 kJ/mol. Because &Delta;H is negative (more energy released than absorbed), the reaction is exothermic."
+      },
+      {
+        id: "T5_Q52",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "The reaction H<sub>2</sub> + F<sub>2</sub> &rarr; 2HF has an overall energy change &Delta;H = &minus;542 kJ/mol. Given H&minus;H = 436 kJ/mol and F&minus;F = 158 kJ/mol, calculate the bond energy of a single H&minus;F bond.",
+        formula: "436 + 158 &minus; 2(H&minus;F) = &minus;542",
+        options: ["568 kJ/mol", "1136 kJ/mol", "26 kJ/mol", "52 kJ/mol"],
+        answer: 0,
+        insight: "Bonds broken = 436 + 158 = 594 kJ/mol. Since 594 &minus; Bonds made = &minus;542, Bonds made = 594 + 542 = 1136 kJ/mol for 2 H&minus;F bonds &rarr; 1 H&minus;F bond = 1136 &divide; 2 = 568 kJ/mol."
+      },
+      {
+        id: "T5_Q53",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "Ethane (C<sub>2</sub>H<sub>6</sub>) reacts with chlorine to form chloroethane (C<sub>2</sub>H<sub>5</sub>Cl) and HCl. Calculate &Delta;H using the bond energies below.",
+        formula: "C<sub>2</sub>H<sub>6</sub> + Cl<sub>2</sub> &rarr; C<sub>2</sub>H<sub>5</sub>Cl + HCl<table class='bond-table'><tr><th>Bond</th><th>C&minus;C</th><th>C&minus;H</th><th>Cl&minus;Cl</th><th>C&minus;Cl</th><th>H&minus;Cl</th></tr><tr><td>Energy (kJ/mol)</td><td>348</td><td>413</td><td>242</td><td>346</td><td>431</td></tr></table>",
+        options: ["&minus;122 kJ/mol", "+122 kJ/mol", "&minus;364 kJ/mol", "+364 kJ/mol"],
+        answer: 0,
+        insight: "Net bonds broken: 1 C&minus;H (413) + 1 Cl&minus;Cl (242) = 655 kJ/mol (the C&minus;C and other 5 C&minus;H bonds are identical on both sides). Net bonds made: 1 C&minus;Cl (346) + 1 H&minus;Cl (431) = 777 kJ/mol. &Delta;H = 655 &minus; 777 = &minus;122 kJ/mol."
+      },
+      {
+        id: "T5_Q54",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "Why do bond energy calculations sometimes give a slightly different value for &Delta;H compared with values measured in a calorimetry experiment?",
+        formula: null,
+        options: [
+          "Bond energies are mean (average) values calculated across many different compounds, and bond energy calculations assume all substances are in the gaseous state",
+          "Bond energy calculations ignore double bonds",
+          "Conservation of energy does not apply to gases",
+          "Thermometers measure activation energy instead of &Delta;H"
+        ],
+        answer: 0,
+        insight: "Tabulated bond energies are average values (e.g., an O&minus;H bond energy varies slightly from molecule to molecule) and apply to gaseous species rather than liquids or solids."
+      },
+      {
+        id: "T5_Q55",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "How many covalent bonds in total must be broken in the reactants of: 2CH<sub>3</sub>OH + 3O<sub>2</sub> &rarr; 2CO<sub>2</sub> + 4H<sub>2</sub>O?",
+        formula: "CH<sub>3</sub>OH has 3 C&minus;H, 1 C&minus;O, and 1 O&minus;H bond",
+        options: [
+          "13 bonds (6 C&minus;H, 2 C&minus;O, 2 O&minus;H, and 3 O=O double bonds)",
+          "8 bonds (3 C&minus;H, 1 C&minus;O, 1 O&minus;H, and 3 O=O)",
+          "5 bonds (2 CH<sub>3</sub>OH + 3 O<sub>2</sub>)",
+          "10 bonds (6 C&minus;H, 2 C&minus;O, and 2 O&minus;H)"
+        ],
+        answer: 0,
+        insight: "Each CH<sub>3</sub>OH has 5 bonds (3 C&minus;H + 1 C&minus;O + 1 O&minus;H), so 2 CH<sub>3</sub>OH = 10 bonds, plus 3 O=O double bonds = 13 bonds in total."
+      },
+      {
+        id: "T5_Q56",
+        tiers: ["higher", "separate"],
+        focus: ["all", "practical_calc"],
+        topic: "Bond Energy Calculations (Higher)",
+        stem: "The decomposition of hydrogen peroxide is shown below. Calculate &Delta;H using the bond energies provided.",
+        formula: "2 H&minus;O&minus;O&minus;H &rarr; 2 H&minus;O&minus;H + O=O<table class='bond-table'><tr><th>Bond</th><th>O&minus;H</th><th>O&minus;O</th><th>O=O</th></tr><tr><td>Energy (kJ/mol)</td><td>464</td><td>146</td><td>498</td></tr></table>",
+        options: ["&minus;206 kJ/mol", "+206 kJ/mol", "&minus;352 kJ/mol", "+352 kJ/mol"],
+        answer: 0,
+        insight: "Bonds broken in 2 H<sub>2</sub>O<sub>2</sub>: (4 &times; 464) + (2 &times; 146) = 1856 + 292 = 2148 kJ/mol. Bonds made in 2 H<sub>2</sub>O + O<sub>2</sub>: (4 &times; 464) + 498 = 1856 + 498 = 2354 kJ/mol. &Delta;H = 2148 &minus; 2354 = &minus;206 kJ/mol."
+      },
+
+      // ========================================================================
+      // 5. CHEMICAL CELLS & HYDROGEN FUEL CELLS (SEPARATE 8462 ONLY — 14 Qs)
+      // ========================================================================
+      {
+        id: "T5_Q57",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "How can a simple chemical cell be constructed in the laboratory to produce a voltage?",
+        formula: null,
+        options: [
+          "By connecting two DIFFERENT metals with wires and placing them into an electrolyte solution",
+          "By connecting two identical pieces of copper in pure distilled water",
+          "By placing two plastic rods into solid sodium chloride",
+          "By heating a single piece of magnesium over a Bunsen flame"
+        ],
+        answer: 0,
+        insight: "A simple chemical cell requires two electrodes made of metals with DIFFERENT reactivities in contact with an electrolyte (a liquid containing mobile ions)."
+      },
+      {
+        id: "T5_Q58",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "What determines the SIZE of the voltage produced by a simple chemical cell made from two different metals in an electrolyte?",
+        formula: null,
+        options: [
+          "The difference in reactivity between the two metals—the bigger the difference in reactivity, the larger the voltage produced",
+          "The total mass of the glass beaker",
+          "Whether the wires are coated in red or black plastic",
+          "The atmospheric pressure outside the laboratory"
+        ],
+        answer: 0,
+        insight: "A larger reactivity gap between the two metals creates a stronger tendency for electrons to flow from the more reactive metal to the less reactive metal, giving a higher voltage."
+      },
+      {
+        id: "T5_Q59",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "A student builds simple cells using copper as one electrode and tests four different metals as the second electrode: Magnesium, Zinc, Iron, and Silver. Which pairing produces the HIGHEST voltage?",
+        formula: "Reactivity: Mg &gt; Zn &gt; Fe &gt; Cu &gt; Ag",
+        options: [
+          "Magnesium and Copper",
+          "Zinc and Copper",
+          "Iron and Copper",
+          "Silver and Copper"
+        ],
+        answer: 0,
+        insight: "Magnesium and copper are furthest apart in the reactivity series, so they generate the largest potential difference (voltage)."
+      },
+      {
+        id: "T5_Q60",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "In a simple chemical cell made of zinc and copper electrodes in dilute sulfuric acid, which metal acts as the NEGATIVE electrode (loses electrons) and which way do electrons flow through the external wire?",
+        formula: "Zn(s) &rarr; Zn<sup>2+</sup>(aq) + 2e<sup>&minus;</sup>",
+        options: [
+          "Zinc is the negative electrode because it is more reactive and loses electrons; electrons flow from zinc to copper through the wire",
+          "Copper is the negative electrode; electrons flow from copper to zinc",
+          "Neither metal loses electrons; ions flow through the copper wire",
+          "Zinc gains electrons from the sulfuric acid"
+        ],
+        answer: 0,
+        insight: "The more reactive metal (zinc) is oxidised (loses electrons) and becomes the negative terminal, pushing electrons around the external circuit toward the less reactive metal (copper)."
+      },
+      {
+        id: "T5_Q61",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "What is a BATTERY in chemistry?",
+        formula: null,
+        options: [
+          "Two or more chemical cells connected together in series to provide a greater voltage",
+          "Any single beaker containing distilled water",
+          "A fuel tank filled with liquid hydrogen",
+          "A single metal rod dipped in acid"
+        ],
+        answer: 0,
+        insight: "Connecting multiple cells in series sums their individual voltages (e.g., four 1.5 V cells in series = a 6.0 V battery)."
+      },
+      {
+        id: "T5_Q62",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "Why do NON-RECHARGEABLE cells (such as alkaline batteries) eventually go 'flat' and stop producing electricity?",
+        formula: null,
+        options: [
+          "The chemical reactions inside the cell are irreversible, so the voltage drops to zero once one of the reactants has been used up",
+          "The metal case melts due to exothermic heating",
+          "The electrolyte turns into pure gold",
+          "Electrons leak out into the air"
+        ],
+        answer: 0,
+        insight: "In non-rechargeable cells, once the limiting reactant is consumed, the irreversible reaction stops and the cell cannot be restored."
+      },
+      {
+        id: "T5_Q63",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "How can RECHARGEABLE cells and batteries (such as lithium-ion phone batteries) be recharged?",
+        formula: null,
+        options: [
+          "By connecting them to an external electrical current, which reverses the chemical reactions inside the cell and regenerates the original reactants",
+          "By placing them in a freezer for 24 hours",
+          "By adding fresh hydrochloric acid through a valve",
+          "By shaking them vigorously to create friction"
+        ],
+        answer: 0,
+        insight: "Applying an external electrical supply drives the reversible electrode reactions backward, restoring the reactants."
+      },
+      {
+        id: "T5_Q64",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "What is the overall chemical reaction that takes place inside a HYDROGEN FUEL CELL?",
+        formula: "Fuel + Oxidant &rarr; Product",
+        options: [
+          "2H<sub>2</sub>(g) + O<sub>2</sub>(g) &rarr; 2H<sub>2</sub>O(l)",
+          "H<sub>2</sub>O(l) &rarr; H<sub>2</sub>(g) + O<sub>2</sub>(g)",
+          "CH<sub>4</sub>(g) + 2O<sub>2</sub>(g) &rarr; CO<sub>2</sub>(g) + 2H<sub>2</sub>O(l)",
+          "2H<sub>2</sub>(g) + N<sub>2</sub>(g) &rarr; 2NH<sub>3</sub>(g)"
+        ],
+        answer: 0,
+        insight: "A hydrogen fuel cell oxidises hydrogen electrochemically using oxygen from the air, producing electrical energy and water as the sole chemical product."
+      },
+      {
+        id: "T5_Q65",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "In an alkaline hydrogen fuel cell, which half-equation takes place at the NEGATIVE electrode (anode) where hydrogen is oxidised?",
+        formula: "Hydrogen oxidation half-equation (AQA 8462)",
+        options: [
+          "2H<sub>2</sub> + 4OH<sup>&minus;</sup> &rarr; 4H<sub>2</sub>O + 4e<sup>&minus;</sup>",
+          "O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>&minus;</sup> &rarr; 4OH<sup>&minus;</sup>",
+          "2H<sup>+</sup> + 2e<sup>&minus;</sup> &rarr; H<sub>2</sub>",
+          "4OH<sup>&minus;</sup> &rarr; O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>&minus;</sup>"
+        ],
+        answer: 0,
+        insight: "AQA 8462 specification half-equation at the negative electrode: 2H<sub>2</sub> + 4OH<sup>−</sup> &rarr; 4H<sub>2</sub>O + 4e<sup>−</sup> (hydrogen loses electrons = oxidation)."
+      },
+      {
+        id: "T5_Q66",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "In an alkaline hydrogen fuel cell, which half-equation takes place at the POSITIVE electrode (cathode) where oxygen is reduced?",
+        formula: "Oxygen reduction half-equation (AQA 8462)",
+        options: [
+          "O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>&minus;</sup> &rarr; 4OH<sup>&minus;</sup>",
+          "2H<sub>2</sub> + 4OH<sup>&minus;</sup> &rarr; 4H<sub>2</sub>O + 4e<sup>&minus;</sup>",
+          "O<sub>2</sub> + 4e<sup>&minus;</sup> &rarr; 2O<sup>2&minus;</sup>",
+          "2H<sub>2</sub>O &rarr; O<sub>2</sub> + 4H<sup>+</sup> + 4e<sup>&minus;</sup>"
+        ],
+        answer: 0,
+        insight: "AQA 8462 specification half-equation at the positive electrode: O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>−</sup> &rarr; 4OH<sup>−</sup> (oxygen gains electrons = reduction)."
+      },
+      {
+        id: "T5_Q67",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "Which statement lists TWO genuine ADVANTAGES of hydrogen fuel cells compared with rechargeable lithium-ion batteries in vehicles?",
+        formula: null,
+        options: [
+          "They produce only water as a tailpipe emission (no CO<sub>2</sub> or toxic pollutants during operation) and can be refuelled quickly to run continuously as long as fuel is supplied",
+          "Hydrogen gas is found naturally in huge underground lakes and needs no pressure tanks",
+          "Fuel cells never wear out and cost nothing to manufacture",
+          "Hydrogen is non-flammable and denser than lead"
+        ],
+        answer: 0,
+        insight: "Fuel cells operate continuously without hours of recharging, produce zero CO<sub>2</sub>/NO<sub>x</sub> at the point of use (only H<sub>2</sub>O), and do not contain toxic heavy metals like rechargeable batteries."
+      },
+      {
+        id: "T5_Q68",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "Which statement lists TWO genuine DISADVANTAGES of hydrogen fuel cells compared with rechargeable batteries?",
+        formula: null,
+        options: [
+          "Hydrogen is a highly flammable gas that is difficult and bulky to store safely under high pressure, and most hydrogen is currently made from fossil fuels (releasing CO<sub>2</sub>)",
+          "Hydrogen fuel cells emit large clouds of sulfur dioxide and soot",
+          "Hydrogen fuel cells cannot produce a voltage above 0.01 V",
+          "Rechargeable batteries are single-use and cannot be recharged"
+        ],
+        answer: 0,
+        insight: "AQA 8462 evaluation points: hydrogen is explosive/flammable, requires heavy high-pressure cylinders, lacks refuelling stations, and its manufacture (steam reforming of natural gas or electrolysis using fossil electricity) often generates CO<sub>2</sub>."
+      },
+      {
+        id: "T5_Q69",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "Why does changing the electrolyte in a simple chemical cell (for example, from dilute sulfuric acid to sodium chloride solution) change the voltage produced?",
+        formula: null,
+        options: [
+          "Different electrolytes contain different ions with different concentrations and conductivities, affecting the electrode reactions",
+          "Electrolytes change the atomic numbers of the metal electrodes",
+          "Sodium chloride turns copper into magnesium",
+          "Only acidic electrolytes contain ions"
+        ],
+        answer: 0,
+        insight: "The voltage of a cell depends on both the identity of the two metal electrodes AND the type/concentration of the electrolyte."
+      },
+      {
+        id: "T5_Q70",
+        tiers: ["separate"],
+        focus: ["all"],
+        topic: "Chemical Cells & Hydrogen Fuel Cells (Triple 8462)",
+        stem: "When you add the two alkaline hydrogen fuel cell half-equations together and cancel out OH<sup>&minus;</sup>, H<sub>2</sub>O, and 4e<sup>&minus;</sup>, what is the resulting net equation?",
+        formula: "(2H<sub>2</sub> + 4OH<sup>&minus;</sup> &rarr; 4H<sub>2</sub>O + 4e<sup>&minus;</sup>) + (O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>&minus;</sup> &rarr; 4OH<sup>&minus;</sup>)",
+        options: [
+          "2H<sub>2</sub> + O<sub>2</sub> &rarr; 2H<sub>2</sub>O",
+          "H<sub>2</sub> + O<sub>2</sub> &rarr; H<sub>2</sub>O<sub>2</sub>",
+          "2H<sub>2</sub> + 2O<sub>2</sub> &rarr; 2H<sub>2</sub>O + O<sub>2</sub>",
+          "4OH<sup>&minus;</sup> &rarr; 2H<sub>2</sub>O + O<sub>2</sub>"
+        ],
+        answer: 0,
+        insight: "4OH<sup>−</sup> and 4e<sup>−</sup> cancel on both sides, and 2H<sub>2</sub>O cancels from 4H<sub>2</sub>O to leave 2H<sub>2</sub> + O<sub>2</sub> &rarr; 2H<sub>2</sub>O."
+      }
+    ];
+
+    /* ==========================================================================
+       APPLICATION STATE
+       ========================================================================== */
+    const configState = {
+      studentName: "",
+      studentEmail: "",
+      tier: "higher",         // 'foundation' | 'higher' | 'separate'
+      focus: "all",           // 'all' | 'practical_calc'
+      questionCount: 20
+    };
+
+    const quizState = {
+      questions: [],
+      currentIndex: 0,
+      answers: [],            // { question, selectedIndex, isCorrect }
+      answeredCurrent: false,
+      isRetryMode: false
+    };
+
+    const TIER_META = {
+      foundation: { name: "Foundation Tier", badge: "Foundation Tier Selected" },
+      higher: { name: "Higher Tier", badge: "Higher Tier Selected" },
+      separate: { name: "Separate Chemistry", badge: "Separate Chemistry Selected" }
+    };
+
+    /* ==========================================================================
+       CONFIGURATION SCREEN INTERACTIONS
+       ========================================================================== */
+    function getFilteredPool() {
+      return QUESTION_POOL.filter(q => {
+        const tierMatch = q.tiers.includes(configState.tier);
+        const focusMatch = q.focus.includes(configState.focus);
+        return tierMatch && focusMatch;
+      });
+    }
+
+    function updateConfigUI() {
+      ["foundation", "higher", "separate"].forEach(t => {
+        const card = document.getElementById(`tier-card-${t}`);
+        const isSel = configState.tier === t;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+      });
+      document.getElementById("selected-tier-badge").textContent = TIER_META[configState.tier].badge;
+
+      ["all", "practical_calc"].forEach(f => {
+        const card = document.getElementById(`focus-card-${f}`);
+        const chk = document.getElementById(`focus-check-${f}`);
+        const isSel = configState.focus === f;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+        chk.classList.toggle("hidden", !isSel);
+      });
+
+      document.querySelectorAll(".count-btn").forEach(btn => {
+        const val = Number(btn.getAttribute("data-count"));
+        btn.classList.toggle("active", val === configState.questionCount);
+      });
+
+      const pool = getFilteredPool();
+      const focusSuffix = configState.focus === "practical_calc" ? " (RP4 & Bond Calculations)" : "";
+      document.getElementById("available-q-label").textContent =
+        `${pool.length} unique questions available for ${TIER_META[configState.tier].name}${focusSuffix}`;
+
+      const effectiveCount = Math.min(configState.questionCount, pool.length);
+      const countDisplay = configState.questionCount > pool.length
+        ? `${effectiveCount} Available Questions`
+        : `${configState.questionCount} Questions`;
+
+      document.getElementById("btn-start-quiz").innerHTML =
+        `Start ${TIER_META[configState.tier].name} Quiz (${countDisplay}) &rarr;`;
+    }
+
+    function selectTier(tierKey) {
+      configState.tier = tierKey;
+      updateConfigUI();
+    }
+
+    function selectFocus(focusKey) {
+      configState.focus = focusKey;
+      updateConfigUI();
+    }
+
+    function selectCount(num) {
+      configState.questionCount = num;
+      updateConfigUI();
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function launchConfiguredQuiz() {
+      const nameInput = document.getElementById("student-name");
+      const errorMsg = document.getElementById("name-error-msg");
+      const rawName = nameInput.value.trim();
+
+      if (!rawName) {
+        nameInput.classList.remove("input-error");
+        void nameInput.offsetWidth;
+        nameInput.classList.add("input-error");
+        errorMsg.classList.remove("hidden");
+        nameInput.focus();
+        return;
+      }
+
+      nameInput.classList.remove("input-error");
+      errorMsg.classList.add("hidden");
+
+      configState.studentName = rawName;
+      configState.studentEmail = document.getElementById("student-email").value.trim();
+
+      const pool = shuffleArray(getFilteredPool());
+      const selectedQuestions = pool.slice(0, Math.min(configState.questionCount, pool.length));
+
+      quizState.questions = selectedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = false;
+
+      switchScreen("view-quiz");
+      document.getElementById("banner-main-title").textContent = "Energy Changes";
+      document.getElementById("banner-main-sub").textContent =
+        `${TIER_META[configState.tier].name} • ${configState.focus === "practical_calc" ? "Required Practical 4 & Bond Calculations Drill" : "Full Topic 5 Assessment"}`;
+
+      renderActiveQuestion();
+    }
+
+    function startRetryMissed() {
+      const missedQuestions = quizState.answers
+        .filter(item => !item.isCorrect)
+        .map(item => item.question);
+
+      if (missedQuestions.length === 0) return;
+
+      quizState.questions = missedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = true;
+
+      switchScreen("view-quiz");
+      renderActiveQuestion();
+    }
+
+    function returnToConfig() {
+      switchScreen("view-config");
+      document.getElementById("banner-main-title").textContent = "Configure Your Energy Changes Quiz";
+      document.getElementById("banner-main-sub").textContent =
+        "Enter your name, choose your tier, select either all Topic 5 content or Required Practical & Bond Calculations only, and pick your question count.";
+      updateConfigUI();
+    }
+
+    function switchScreen(activeId) {
+      ["view-config", "view-quiz", "view-report"].forEach(id => {
+        document.getElementById(id).classList.toggle("hidden", id !== activeId);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       ACTIVE QUIZ RENDERING & LOGIC
+       ========================================================================== */
+    function renderActiveQuestion() {
+      const total = quizState.questions.length;
+      const idx = quizState.currentIndex;
+      const qObj = quizState.questions[idx];
+      quizState.answeredCurrent = false;
+
+      document.getElementById("hud-student-pill").textContent = configState.studentName;
+      document.getElementById("hud-tier-pill").textContent = TIER_META[configState.tier].name;
+      document.getElementById("hud-topic-pill").textContent = qObj.topic;
+      document.getElementById("hud-retry-pill").classList.toggle("hidden", !quizState.isRetryMode);
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+      document.getElementById("hud-counter").textContent = `Question ${idx + 1} of ${total}`;
+
+      const pct = Math.round((idx / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${pct}%`;
+
+      document.getElementById("q-kicker-label").textContent = `Question ${idx + 1} of ${total}`;
+      document.getElementById("q-stem-text").innerHTML = qObj.stem;
+
+      const formulaBox = document.getElementById("q-formula-box");
+      if (qObj.formula) {
+        formulaBox.innerHTML = qObj.formula;
+        formulaBox.classList.remove("hidden");
+      } else {
+        formulaBox.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("quiz-options-list");
+      optionsContainer.innerHTML = "";
+      const letters = ["A", "B", "C", "D"];
+
+      qObj.options.forEach((optText, optIdx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "opt-btn";
+        btn.innerHTML = `
+          <span class="opt-letter">${letters[optIdx]}</span>
+          <span>${optText}</span>
+        `;
+        btn.addEventListener("click", () => submitOption(optIdx));
+        optionsContainer.appendChild(btn);
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      fbPanel.className = "feedback-panel hidden";
+
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.classList.add("hidden");
+      nextBtn.innerHTML = idx === total - 1 ? "View Diagnostic Report &rarr;" : "Next Question &rarr;";
+    }
+
+    function submitOption(selectedIdx) {
+      if (quizState.answeredCurrent) return;
+      quizState.answeredCurrent = true;
+
+      const qObj = quizState.questions[quizState.currentIndex];
+      const isCorrect = selectedIdx === qObj.answer;
+
+      quizState.answers.push({
+        question: qObj,
+        selectedIndex: selectedIdx,
+        isCorrect: isCorrect
+      });
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+
+      const total = quizState.questions.length;
+      const donePct = Math.round(((quizState.currentIndex + 1) / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${donePct}%`;
+
+      const optionBtns = document.querySelectorAll("#quiz-options-list .opt-btn");
+      optionBtns.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === qObj.answer) {
+          btn.classList.add("correct");
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.classList.add("incorrect");
+        } else {
+          btn.classList.add("dimmed");
+        }
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      const fbStatus = document.getElementById("fb-status-text");
+      const fbInsight = document.getElementById("fb-insight-text");
+
+      fbPanel.classList.remove("hidden", "fb-pass", "fb-fail");
+      if (isCorrect) {
+        fbPanel.classList.add("fb-pass");
+        fbStatus.textContent = "✓ Correct — Full Marks!";
+      } else {
+        fbPanel.classList.add("fb-fail");
+        const correctLetter = ["A", "B", "C", "D"][qObj.answer];
+        fbStatus.textContent = `✗ Incorrect — Correct Answer: Option ${correctLetter}`;
+      }
+      fbInsight.innerHTML = qObj.insight;
+
+      document.getElementById("btn-next-question").classList.remove("hidden");
+    }
+
+    function advanceQuestion() {
+      if (quizState.currentIndex < quizState.questions.length - 1) {
+        quizState.currentIndex++;
+        renderActiveQuestion();
+      } else {
+        showDiagnosticReport();
+      }
+    }
+
+    /* ==========================================================================
+       DIAGNOSTIC REPORT
+       ========================================================================== */
+    function showDiagnosticReport() {
+      switchScreen("view-report");
+      document.getElementById("banner-main-title").textContent = "Topic 5 Diagnostic Performance Report";
+      document.getElementById("banner-main-sub").textContent =
+        `Completed by ${configState.studentName}${configState.studentEmail ? ` (${configState.studentEmail})` : ""} • ${TIER_META[configState.tier].name}`;
+
+      const total = quizState.answers.length;
+      const correct = quizState.answers.filter(a => a.isCorrect).length;
+      const missed = total - correct;
+      const pct = Math.round((correct / total) * 100);
+
+      document.getElementById("rep-student-header").textContent =
+        `${configState.studentName} • ${TIER_META[configState.tier].name}${quizState.isRetryMode ? " (Retry Round)" : ""}`;
+      document.getElementById("rep-pct-val").textContent = `${pct}%`;
+      document.getElementById("rep-frac-val").textContent = `(${correct} / ${total})`;
+      document.getElementById("rep-grade-pill").textContent = estimateAqaGrade(pct, configState.tier);
+
+      const msgEl = document.getElementById("rep-msg-text");
+      if (pct === 100) {
+        msgEl.textContent = `Outstanding work, ${configState.studentName}! You scored 100% across every question. Your AQA Topic 5 Energy Changes knowledge and calculations are exam-ready.`;
+      } else if (pct >= 80) {
+        msgEl.textContent = `Strong performance, ${configState.studentName}! You have a solid command of Energy Changes. Click 'Retry Missed Questions' below to master the final ${missed} question${missed === 1 ? "" : "s"}.`;
+      } else if (pct >= 50) {
+        msgEl.textContent = `Good progress, ${configState.studentName}! Review the amber and red sub-topics below, read the AQA Examiner Insights, and retry your missed questions to boost your grade.`;
+      } else {
+        msgEl.textContent = `Great active recall practice, ${configState.studentName}! Focus on the Priority Revision sub-topics in red below, study the worked solutions, and retry your missed questions.`;
+      }
+
+      const retryBtn = document.getElementById("btn-retry-missed");
+      if (missed > 0) {
+        retryBtn.classList.remove("hidden");
+        retryBtn.textContent = `Retry Missed Questions (${missed})`;
+      } else {
+        retryBtn.classList.add("hidden");
+      }
+
+      const topicMap = {};
+      quizState.answers.forEach(entry => {
+        const t = entry.question.topic;
+        if (!topicMap[t]) topicMap[t] = { correct: 0, total: 0 };
+        topicMap[t].total++;
+        if (entry.isCorrect) topicMap[t].correct++;
+      });
+
+      const masteryGrid = document.getElementById("rep-mastery-grid");
+      masteryGrid.innerHTML = "";
+
+      Object.keys(topicMap).forEach(topicName => {
+        const { correct: c, total: t } = topicMap[topicName];
+        const subPct = Math.round((c / t) * 100);
+
+        let chipClass = "sc-weak";
+        let fillClass = "fill-r";
+        let statusLabel = "Priority Revision";
+
+        if (subPct >= 80) {
+          chipClass = "sc-strong";
+          fillClass = "fill-g";
+          statusLabel = "Strong Area";
+        } else if (subPct >= 50) {
+          chipClass = "sc-dev";
+          fillClass = "fill-a";
+          statusLabel = "Developing";
+        }
+
+        const tip = subPct >= 80
+          ? "Secure understanding demonstrated—maintain with spaced active recall."
+          : (SUBTOPIC_GUIDANCE[topicName] || "Review examiner insights and retry missed questions in this sub-topic.");
+
+        const card = document.createElement("div");
+        card.className = "mastery-item";
+        card.innerHTML = `
+          <div class="mastery-item-top">
+            <span class="mastery-name">${topicName}</span>
+            <div class="mastery-right">
+              <span class="status-chip ${chipClass}">${statusLabel}</span>
+              <span style="font-size:0.84rem; font-weight:700; color:var(--slate-700);">${c}/${t} (${subPct}%)</span>
+            </div>
+          </div>
+          <div class="mastery-bar-track">
+            <div class="mastery-bar-fill ${fillClass}" style="width: ${subPct}%"></div>
+          </div>
+          <div class="mastery-tip">${tip}</div>
+        `;
+        masteryGrid.appendChild(card);
+      });
+
+      const reviewList = document.getElementById("rep-review-list");
+      reviewList.innerHTML = "";
+      reviewList.classList.add("hidden");
+      document.getElementById("btn-toggle-review").textContent = "Show All Answers & Insights";
+
+      const letters = ["A", "B", "C", "D"];
+      quizState.answers.forEach((entry, idx) => {
+        const q = entry.question;
+        const userAns = `${letters[entry.selectedIndex]}. ${q.options[entry.selectedIndex]}`;
+        const rightAns = `${letters[q.answer]}. ${q.options[q.answer]}`;
+
+        const item = document.createElement("div");
+        item.className = `review-card ${entry.isCorrect ? "rc-ok" : "rc-bad"}`;
+        item.innerHTML = `
+          <div class="rc-kicker">Question ${idx + 1} &bull; ${q.topic} &bull; ${entry.isCorrect ? "Correct" : "Incorrect"}</div>
+          <div class="rc-q">${q.stem}</div>
+          <div class="rc-ans"><strong>Your Answer:</strong> <span style="color:${entry.isCorrect ? "var(--emerald-700)" : "var(--ruby-600)"}; font-weight:600;">${userAns}</span></div>
+          ${!entry.isCorrect ? `<div class="rc-ans"><strong>Correct Answer:</strong> <span style="color:var(--emerald-700); font-weight:600;">${rightAns}</span></div>` : ""}
+          <div class="rc-exp"><strong>AQA Examiner Insight:</strong> ${q.insight}</div>
+        `;
+        reviewList.appendChild(item);
+      });
+    }
+
+    function estimateAqaGrade(pct, tier) {
+      if (tier === "foundation") {
+        if (pct >= 80) return "Estimated AQA Indicator: Grade 5 (Maximum Foundation)";
+        if (pct >= 65) return "Estimated AQA Indicator: Grade 4 (Standard Pass)";
+        if (pct >= 47) return "Estimated AQA Indicator: Grade 3";
+        return "Estimated AQA Indicator: Grade 1–2 (Keep Practising)";
+      }
+      if (pct >= 87) return "Estimated AQA Indicator: Grade 9";
+      if (pct >= 75) return "Estimated AQA Indicator: Grade 8";
+      if (pct >= 65) return "Estimated AQA Indicator: Grade 7";
+      if (pct >= 53) return "Estimated AQA Indicator: Grade 6";
+      if (pct >= 40) return "Estimated AQA Indicator: Grade 5";
+      return "Estimated AQA Indicator: Grade 4 / Below";
+    }
+
+    function toggleReviewSection() {
+      const list = document.getElementById("rep-review-list");
+      const btn = document.getElementById("btn-toggle-review");
+      const isHidden = list.classList.toggle("hidden");
+      btn.textContent = isHidden ? "Show All Answers & Insights" : "Hide All Answers & Insights";
+      if (!isHidden) {
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    /* ==========================================================================
+       KEYBOARD SHORTCUTS & INITIALISATION
+       ========================================================================== */
+    document.getElementById("student-name").addEventListener("input", function () {
+      if (this.value.trim()) {
+        this.classList.remove("input-error");
+        document.getElementById("name-error-msg").classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("view-quiz").classList.contains("hidden")) return;
+      const key = e.key.toUpperCase();
+      if (!quizState.answeredCurrent) {
+        if (key === "1" || key === "A") submitOption(0);
+        else if (key === "2" || key === "B") submitOption(1);
+        else if (key === "3" || key === "C") submitOption(2);
+        else if (key === "4" || key === "D") submitOption(3);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        advanceQuestion();
+      }
+    });
+
+    updateConfigUI();
+  </script>
+</body>
+</html>
